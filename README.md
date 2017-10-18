@@ -1,24 +1,24 @@
 # README
+Welcome to the blogr development git
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby
+Uses ruby version 2.3.3 (Updated 10/17)
 
-Things you may want to cover:
+#Rails
+Uses rails version 5.1.4 (Updated 10/17)
 
-* Ruby version
+#What to expect
+In this project you will find a web application that serves as a blog for communities to come together to share. 
 
-* System dependencies
+#What can I contribute?
+Contact me if you are serious about contributing to this project. Minimal design changes are accepted anonymously and changes that make the application run faster.
 
-* Configuration
+#Database
+This application uses SQLite as its database.
 
-* Database creation
+#Added gems
+Added gems include bootstrap 4 (alpha 3 build), friendlyid, jquery, etc.
 
-* Database initialization
+#To run this project
+Download and install the latest versions of Ruby and Ruby on rails, then navigate to the main directory via command prompt or command line, then use the rails server command to start the server. Finally, navigate to localhost:3000 in your browser to see the application.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
