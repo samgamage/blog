@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+document.addEventListener("turbolinks:load", function() {
+  tinymce.remove();
+  tinymce.init({ 
+  	height: '480',
+  	selector:'textarea#post_body',
+  	plugins: "codesample image media link lists code preview autosave",
+  	toolbar: "undo redo | styleselect | bold italic link numlist bullist | codesample image media | code restoredraft preview",
+  });
+})

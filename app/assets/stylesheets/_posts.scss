@@ -30,7 +30,7 @@
 					text-decoration: none;
 				}
 			}
-			published-date {
+			.published-date {
 				font-size: 0.8rem;
 				color: #787878;
 				font-weight: 300;
@@ -39,6 +39,32 @@
 			}
 			.card-text {
 				font-size: 0.9rem;
+			}
+		}
+	}
+}
+
+.posts.edit, .posts.new {
+	.card {
+		.card-block {
+			background-color: $light-gray;
+		}
+		.card-title {
+			margin-bottom: 0;
+			font-size: 18px;
+		}
+		.list-group-item {
+			padding: 10px;
+			border-left: 0;
+			border-right: 0;
+			input[type='text'], textarea {
+				font-size: 14px;
+			}
+			textarea {
+				height: 100px;
+			}
+			&:last-child {
+				background-color: $light-gray;
 			}
 		}
 	}
