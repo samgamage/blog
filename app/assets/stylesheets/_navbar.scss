@@ -1,14 +1,37 @@
 .navbar {
-	border-radius: 0;
-	margin-bottom: 20px;
+	border-bottom: 2px solid $primary-color-light;
+	margin-bottom: 15px;
+	background-color: white;
 	.navbar-brand {
 		font-weight: bolder;
+		color: $secondary-text-color;
 		.light {
 			font-weight: 300;
+			color: $primary-color-text;
 		}
+	}
+	a.navbar-brand:hover {
+		color: $secondary-text-color;
 	}
 	.navbar-toggler {
 		outline: none;
+	}
+	.nav-link {
+		color: $primary-text-color !important;
+		padding: 0;
+		&.active {
+			color: black !important;
+		}
+	}
+	.nav-item {
+		line-height: 38px;
+	}
+	.nav-item.author-nav {
+		img {
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+		}
 	}
 }
 

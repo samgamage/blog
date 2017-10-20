@@ -1,3 +1,20 @@
 body {
-	background-color: #fafafa;
+	background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, .tags {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $primary-text-color;
+}
+h1, .card-title {
+	font-weight: 600;
+}
+h6 {
+	color: $primary-text-color;
+	font-weight: 300;
+}
+p, p span {
+    font-family: 'Lora', serif !important;
+    color: $primary-text-color;
+    font-size: 17px !important;
 }
