@@ -14,7 +14,7 @@ In this project you will find a web application that serves as a blog for commun
 Contact me if you are serious about contributing to this project. Minimal design changes are accepted anonymously and changes that make the application run faster.
 
 # Database
-This application uses SQLite as its database.
+This application uses PostgreSQL as its database.
 
 # Added gems
 Added gems include bootstrap 4 (alpha 3 build), friendlyid, jquery, etc.
