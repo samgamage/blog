@@ -1,11 +1,16 @@
 <tr>
-	<td><%= link_to post.title, authors_post_path(post) %></td>
+	<td class="right post-title">
+		<ul>
+			<li class="title"><%= link_to post.title, authors_post_path(post) %></li>
+			<li class="date"><%= post.display_day_published %></li>
+		</ul>
+	</td>
 	<td></td>
 	<% if post.published %>
-		<td><%= link_to 'Unpublish', unpublish_authors_post_path(post), method: :put, class: 'btn btn-sm btn-primary' %></td>
+		<td class="right post-publish-btn"><%= link_to 'Unpublish', unpublish_authors_post_path(post), method: :put, class: 'btn-posts' %></td>
 	<% else %>
-		<td><%= link_to 'Publish', publish_authors_post_path(post), method: :put, class: 'btn btn-sm btn-success' %></td>
+		<td class="right post-publish-btn"><%= link_to 'Publish', publish_authors_post_path(post), method: :put, class: 'btn-posts' %></td>
 	<% end %>
-	<td><%= link_to 'Edit', edit_authors_post_path(post), class: 'btn btn-sm btn-warning' %></td>
-	<td><%= link_to 'Remove', authors_post_path(post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
+	<td class="right post-edit-btn"><%= link_to 'Edit', edit_authors_post_path(post), class: 'btn-posts' %></td>
+	<td class="right post-remove-btn"><%= link_to 'Remove', authors_post_path(post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-posts' %></td>
 </tr>

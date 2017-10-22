@@ -11,70 +11,66 @@
     </div>
   <% end %>
 
+<div class="container">
   <div class="row">
-    <div class="col-md-4">
+
 
       <div class="card">
         <div class="card-block">
+
+          <%= link_to authors_posts_path, title: 'Go back', class: 'link-back' do %>
+            <img class="icon icons8-Left-Filled" width="28" height="28" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAsElEQVRoge3XQRGDMBRF0SupEp6ESkBCHVQaEpAQCZFAF3TDAAsgk5+078xkzb8DmQQwMzMzM6tIwAQk4Bk7ynUDkIH5u3LoNBcNrCO6DBHbiJklrhvCEW0Q+xGvwJlOE/sR78CZTnvgiDYcRdRaieWT7jqi2AGrBiKK3RSiYzIFz6ejmGIPqEk4pk3CMW0SfxDT5T+72IakyIHuEOuQKXSam8TyJkY63SdmZmZm9uM+raHp7pEndrMAAAAASUVORK5CYII=">
+          <% end %>
+
+          <div class="actions">
+            <% if @post.persisted? %>
+              <%= f.submit "Save blog post", class: 'btn-edit-new' %>
+            <% else %>
+              <%= f.submit "Create blog post", class: 'btn-edit-new' %>
+            <% end %>
+            <% if @post.persisted? %>
+              <%= link_to @post, title: 'Show post', class: 'link-show' do %>
+                <img class="icon icons8-Eye" width="28" height="28" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB0klEQVRoge2Xa5GDMBRGj4RIQAISkFAJSMABEpBQCUhAQiUgAQnsjySzTDeBL4F2tzs5M5nptM195L4SKBQKhUKh8D8wQAsMwAg8gMWtyX3Xu//8GQxwwxq3AGvCGvlFZwzQkW50bPXvNL7BpscVhm/XzIsjYrBh3zPC53sL1G6PASr33V1w5OH2XEqDPaEjxTdBVi3IWkRZEkquD6SfWn8g83RtGGfYkZLhhA7FiTHXeCVfZ87nq9IQplcYv2JrI0TD9zCb3ec68t9K1CU7oRofC+1ezXQndR460YmCVsJdot4xfi9qtwS90ZprE4Ss2NA/czQnYpEzibqDLTZ1uoYcmIV9ywUOhGRIyrcr1H1yHSDDgR/6U/JwJdxVlBSaAvuqRN2xZiB3g5XwxasR9oXy95Ii9kyioFgb7TOUK5Hz0ZMGp+pEbDjVTsb2RRa7nFVo74rkW6rixJwi8ISe7Cu2UhPRghJQBueYa7xHuZH2iTLVJ2nONT1Ic6DIh7kSZNVoL7v2CsO3GLR8vWMLttrsq7CHMHB86hPaQWTTkT61lbU42Ze/h/cc+UjDn+nQ58ZzqnS8OF1S8J3ljjXOp9mCLfDR/dYTH4CFQqFQKBQ+ii+shF6IngEg5AAAAABJRU5ErkJggg==">
+              <% end %>
+            <% end %>
+          </div>
+
+
           <% if @post.new_record? %>
             <h4 class="card-title">New post</h4>
           <% else %>
             <h4 class="card-title">
               <b>Edit</b>
-              <span class="thin-text"><%= @post.title %></span>
+              <span class="thin-text">"<%= @post.title %>"</span>
             </h4>
           <% end %>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <div class="field">
-              <%= f.label :title %>
-              <%= f.text_field :title, class: 'form-control' %>
+              <%= f.label :title, class: 'source-sans-pro label-title' %>
+              <%= f.text_field :title, class: 'form-control form-title source-sans-pro', placeholder: 'Title' %>
+              <%= f.label :banner_image_url, class: 'source-sans-pro label-banner' %>
+              <%= f.text_field :banner_image_url, class: 'form-control form-banner source-sans-pro', placeholder: 'Ex: www.imgur.com/wEmkEr.png' %>
             </div>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" style="border-top: none;">
             <div class="field">
-              <%= f.label :banner_image_url %>
-              <%= f.text_field :banner_image_url, class: 'form-control' %>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="field">
-              <%= f.label :description %>
-              <%= f.text_area :description, class: 'form-control' %>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="field">
-              <%= f.label 'Tags' %>
-              <%= f.text_area :tag_list, class: 'form-control' %>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="actions">
-            <% if @post.persisted? %>
-              <%= f.submit "Save blog post", class: 'btn btn-success btn-block' %>
-            <% else %>
-              <%= f.submit "Create blog post", class: 'btn btn-success btn-block' %>
-            <% end %>
+              <%= f.label :description, class: 'source-sans-pro label-desc' %>
+              <%= f.text_area :description, class: 'form-control form-desc source-sans-pro', placeholder: 'Description' %>
+              <%= f.label 'Tags', class: 'source-sans-pro label-tag' %>
+              <%= f.text_area :tag_list, class: 'form-control form-tag source-sans-pro', placeholder: 'Ex: Nature, Colors, Earth' %>
             </div>
           </li>
         </ul>
       </div>
 
-      <% if @post.persisted? %>
-        <%= link_to 'Show', @post %> |
-      <% end %>
-      <%= link_to 'Back', authors_posts_path %>
-
-    </div>
-
-    <div class="col-md-8">
       <div class="field">
         <%= f.text_area :body, id: :post_body %>
       </div>
-    </div>
+
   </div>
+</div>
   
   
 <% end %>

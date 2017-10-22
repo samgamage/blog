@@ -18,9 +18,16 @@
 document.addEventListener("turbolinks:load", function() {
   tinymce.remove();
   tinymce.init({ 
-  	height: '480',
+  	height: '800',
   	selector:'textarea#post_body',
-  	plugins: "codesample image media link lists code preview autosave",
-  	toolbar: "undo redo | styleselect | bold italic link numlist bullist | codesample image media | code restoredraft preview",
-  });
+  	menubar: false,
+  	plugins: [
+	    "advlist autolink lists link image charmap print preview anchor textcolor",
+	    "searchreplace visualblocks code fullscreen",
+	    "insertdatetime media table contextmenu paste code help"],
+  	toolbar: "insert | undo redo |  formatselect | bold italic  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ",
+  	content_css: [
+	    "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
+	    "//www.tinymce.com/css/codepen.min.css"]
+});
 })

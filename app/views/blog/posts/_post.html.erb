@@ -1,14 +1,23 @@
-<div class='col-sm-6 col-lg-4'>
+<div class='col-md-6'>
 	<div class="card">
+		<div class="author-info">	
+			<%= image_tag(post.author.gravatar_image_url) %>
+			<ul class="author-post-info">
+				<li class="info"><%= post.author.name %></li>
+				<li class="info-date"><%= post.display_day_published %></li>
+			</ul>	
+		</div>
 		<%= link_to post do %>
 			<div class="card-topper" style='background-image: url(<%= post.banner_image_url %>);'></div>
 		<% end %>
 		<div class="card-block">
 			<h4 class="card-title"><%= link_to post.title, post %></h4>
-			<h6 class="tags"><div class="tag-img"></div><%= raw post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %></h6>
-			<h6 class="published-date"><%= post.display_day_published %></h6>
+			<h6 class="tags"><%= raw post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(' ') %></h6>
 			<%= link_to post do %>
-			<p class="card-text"><%= truncate(post.description, length: 130) %></p>
+			<h6 class="card-text"><%= truncate(post.description, length: 90) %></h6>
+			<% end %>
+			<%= link_to post do %>
+			<h6 class="read-more">Read more..</h6>
 			<% end %>
 		</div>
 	</div>

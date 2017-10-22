@@ -1,6 +1,15 @@
 <% provide(:page_title, 'All Posts') %>
 <% provide(:blog_active, 'active') %>
 
+<div class="title-container">
+	<div class="title">
+		<% if current_page?(:controller => 'posts') %>
+			<h5>Today's top stories</h5>
+		<% else %>
+			<h5>Post's tagged with <%= request.query_parameters.to_s[8,50].slice!(/".*"/) %></h5>
+		<% end %>
+	</div>
+</div>
 <div class="row">
   <%= render @posts %>
 </div>
