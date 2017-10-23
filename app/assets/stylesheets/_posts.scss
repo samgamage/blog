@@ -158,6 +158,7 @@
 	.card {
 		border: none;
 		.card-block {
+			height: fit-content;
 			padding: 0;
 			.back-arrow {
 				font-size: 10px;
@@ -173,11 +174,11 @@
 				text-decoration: none;
 			}
 		}
-		.card-title {
+		.card-title h1 {
 			font-size: 2.5rem;
 			line-height: 1.04;
 			letter-spacing: -.015em;
-			font-weight: 700;
+			font-weight: 700 !important;
 			border-bottom: 1px solid black;
 			margin: 0;
 			padding: 10px 0px;
@@ -268,6 +269,12 @@
 	.link-back:hover {
 		color: white;
 	}
+	.actions {
+		width: fit-content;
+	    padding: 0;
+	    margin: 0;
+	    float: right;
+	}
 	.link-show {
 		float: right;
 		line-height: 46px;
@@ -276,6 +283,7 @@
 	img {
 		opacity: 0.4;
 		transition: .2s ease-in-out;
+		margin: 10px 0px;
 	}
 	img:hover {
 		opacity: 0.9;
@@ -288,12 +296,51 @@
 .posts.show {
 	.post-main-title {
 		margin: 1rem 0rem;
+		font-weight: 700 !important;
+		font-size: 2.5rem !important;
 	}
 	.post-body {
 		img {
 			display: block;
 			width: 100%;
 			height: auto;
+		}
+		h1 {
+			font-weight: 600;
+			font-size: 1.8rem !important;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #212121 !important;
+			margin: 1rem 0rem !important;
+		}
+		h2 {
+			font-weight: 700;
+			font-size: 1.6rem !important;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #212121;
+		}
+		h3 {
+			font-weight: 600;
+			font-size: 1.4rem !important;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #212121;
+		}
+		h4 {
+			font-weight: 600;
+			font-size: 1.2rem !important;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #212121;
+		}
+		h5 {
+			font-weight: 500;
+			font-size: 1.1rem !important;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #212121;
+		}
+		h6 {
+			font-weight: 500;
+			font-size: 1rem !important;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #212121;
 		}
 	}
 	.author-info {

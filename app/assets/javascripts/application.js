@@ -21,6 +21,9 @@ document.addEventListener("turbolinks:load", function() {
   	height: '800',
   	selector:'textarea#post_body',
   	menubar: false,
+    branding: false,
+    statusbar: false,
+    resize: false,
   	plugins: [
 	    "advlist autolink lists link image charmap print preview anchor textcolor",
 	    "searchreplace visualblocks code fullscreen",

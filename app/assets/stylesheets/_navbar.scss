@@ -1,8 +1,17 @@
 .navbar {
+	padding: 0;
+	.container {
+		height: 56px;
+		padding-top: 8px;
+	}
 	border-bottom: 2px solid $primary-color-light;
 	margin-bottom: 15px;
 	background-color: white;
+	.nav {
+		line-height: 56px;
+	}
 	.navbar-brand {
+		margin-bottom: 8px;
 		.light {
 			font-family: Playfair Display, serif;
 			font-weight: 900;
@@ -27,6 +36,7 @@
 	.nav-item {
 		line-height: 56px;
 		a {
+			font-family: 'Source Sans Pro', sans-serif;
 			color: rgba(0,0,0,0.6);
 			transition: .2s ease-in-out;
 		}
