@@ -10,9 +10,24 @@
 		<% end %>
 	</div>
 </div>
+
+
 <div class="row">
-  <%= render @posts %>
+	<div class="col-md-6">
+		<%= render @posts[0] if @posts[0] != nil %>
+		<%= render @posts[2] if @posts[2] != nil%>
+		<%= render @posts[4] if @posts[4] != nil%>
+	</div>
+	<div class="col-md-6">
+		<%= render @posts[1] if @posts[1] != nil%>
+		<%= render @posts[3] if @posts[3] != nil%>
+		<%= render @posts[5] if @posts[5] != nil%>
+	</div>
 </div>
+
+
+
+
 <div class="apple_pagination">
 	<%= will_paginate @posts, container: false %>
 </div>

@@ -1,11 +1,11 @@
-<div class='col-md-6'>
+
 	<div class="card">
-		<div class="author-info">	
+		<div class="author-info">
 			<%= image_tag(post.author.gravatar_image_url) %>
 			<ul class="author-post-info">
 				<li class="info"><%= post.author.name %></li>
 				<li class="info-date"><%= post.display_day_published %></li>
-			</ul>	
+			</ul>
 		</div>
 		<%= link_to post do %>
 			<div class="card-topper" style='background-image: url(<%= post.banner_image_url %>);'></div>
@@ -21,4 +21,3 @@
 			<% end %>
 		</div>
 	</div>
-</div>

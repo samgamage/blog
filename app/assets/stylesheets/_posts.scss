@@ -15,20 +15,18 @@
 			}
 		}
 	}
+	// Redo: How posts are displayed
+
 	.card {
 		box-shadow: 0 1px 4px rgba(0,0,0,.04);
-	    border: 1px solid rgba(0,0,0,.09);
-	    border-radius: 3px;
-		margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,.09);
+    border-radius: 4px;
 		background-color: white;
 		padding: 20px;
-		height: 464px;
+		height: 100%;
+		margin-bottom: 15px !important;
 		.author-info {
-			height: 46px;
-		    width: 46px;
-		    margin: 0;
-		    padding: 0;
-		    display: inline;
+	    display: inline;
 			img {
 				border-radius: 50%;
 				width: 46px;
@@ -40,6 +38,7 @@
 			ul.author-post-info {
 			    padding: 3px;
 			    height: 40px;
+					margin-bottom: 25px;
 				li {
 					list-style-type: none;
 					color: rgba(0,0,0,.84);
@@ -105,6 +104,7 @@
 			}
 		}
 	}
+
 	.table-striped tbody tr:nth-of-type(odd) {
 		background-color: white !important;
 	}
@@ -196,7 +196,7 @@
 				height: 100px;
 			}
 			&:last-child {
-				
+
 			}
 			.field {
 				display: inline;
@@ -298,6 +298,7 @@
 		margin: 1rem 0rem;
 		font-weight: 700 !important;
 		font-size: 2.5rem !important;
+		margin-top: 30px;
 	}
 	.post-body {
 		img {
